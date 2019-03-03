@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Cronos.Web.Models;
+using Cronos.Infra.Contexto;
 
 namespace Cronos.Web.Controllers
 {
@@ -12,6 +13,9 @@ namespace Cronos.Web.Controllers
     {
         public IActionResult Index()
         {
+            DbContexto db = new DbContexto();
+            var e = db.Livro.ToList();
+
             return View();
         }
 
