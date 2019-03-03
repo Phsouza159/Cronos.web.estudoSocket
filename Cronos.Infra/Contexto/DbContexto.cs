@@ -29,6 +29,8 @@ namespace Cronos.Infra.Contexto
 
             modelBuilder.ApplyConfiguration(new SalararioMap());
 
+            modelBuilder.ApplyConfiguration(new AutentificacaoMap());
+
             /**
              * Relacionamentos
              */
@@ -39,6 +41,8 @@ namespace Cronos.Infra.Contexto
         public DbSet<Livro> Livro { get; set; }
         public DbSet<Gasto> Gasto { get; set; }
         public DbSet<Salario> salario { get; set; }
+        public DbSet<Autentificacao> Autentificacao { get; set; }
+
         /**
          * Relacionamentos
          */

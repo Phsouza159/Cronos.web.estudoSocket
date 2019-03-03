@@ -43,6 +43,15 @@ namespace Cronos.Infra.Contexto.Map
                 .WithOne(p => p.Usuario);
 
             builder
+                .Property(p => p.IdTokien)
+                .HasColumnName("ID_TOKIEN")
+                .HasColumnType("int");
+
+           builder
+                .HasOne(p => p.Autentificacao)
+                .WithOne(p => p.Usuario);
+
+            builder
                 .Property(p => p.Password)
                 .HasColumnName("SENHA")
                 .HasColumnType("varchar(255)");

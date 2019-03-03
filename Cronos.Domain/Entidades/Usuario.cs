@@ -14,14 +14,13 @@ namespace Cronos.Domain.Entidades
 
         }
 
-        public Usuario(string nome, string sobrenome, string user, string password, string email, int? idSalario)
+        public Usuario(string nome, string sobrenome, string user, string password, string email)
         {
             Nome = nome;
             Sobrenome = sobrenome;
             User = user;
             Password = password;
             Email = email;
-            IdSalario = idSalario;
         }
 
         public string Nome { get; set; }
@@ -33,6 +32,9 @@ namespace Cronos.Domain.Entidades
         [ForeignKey("Salario")]
         public int? IdSalario { get; set; }
 
+        [ForeignKey("Autentificacao")]
+        public int? IdTokien { get; set; }
+
         
         public Usuario Valid()
         {
@@ -41,8 +43,8 @@ namespace Cronos.Domain.Entidades
 
          
         public virtual Salario Salario { get; set; }
+        public virtual Autentificacao Autentificacao { get; set; }
         public virtual List<Gasto> Gasto { get; set; }
         public virtual List<LivroUsuario> LivroUsuario { get; set; }
-       
     }
 }

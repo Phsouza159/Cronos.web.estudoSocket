@@ -11,6 +11,7 @@ namespace Cronos.Domain.Interfaces.Entidades
     public interface IUsuario : IBase<Usuario>
     {
         int? IdSalario { get; set; }
+        int? IdTokien { get; set; }
         string Nome { get; set; }
         string Sobrenome { get; set; }
         string User { get; set; }
