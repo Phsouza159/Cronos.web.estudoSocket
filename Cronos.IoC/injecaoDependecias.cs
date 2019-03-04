@@ -35,6 +35,7 @@ namespace Cronos.IoC
             services.AddScoped<ISalarioRepositorio , SalarioRepositorio>();
             services.AddScoped<ILivroRepositorio , LivroRepositorio>();
             services.AddScoped<ILivroUsuarioRepositorio , LivroUsuarioRepositorio>();
+            services.AddScoped<IAutentificacaoRepositorio, AutentificacaoRepositorio>();
 
             // Servico
             services.AddScoped<IAutentificacaoServico, _AutentificacaoServico>();

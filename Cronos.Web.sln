@@ -21,7 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cronos.Api", "Cronos.Api\Cr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cronos.Mapper", "Cronos.Mapper\Cronos.Mapper.csproj", "{1E4CE0EF-E86A-4DA9-9474-982633BD1C93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cronos.IoC", "Cronos.IoC\Cronos.IoC.csproj", "{669E9551-DB1C-4556-AE02-8C5DA7C4BEB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cronos.IoC", "Cronos.IoC\Cronos.IoC.csproj", "{669E9551-DB1C-4556-AE02-8C5DA7C4BEB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{4C63B916-A60A-4656-91F5-B2D6E13ADA96}"
+	ProjectSection(SolutionItems) = preProject
+		ReadME.txt = ReadME.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mysql", "Mysql", "{C8DC276D-5FE9-421B-A86F-CE1DDF2880C8}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\versao 1.0.0.sql = SQL\versao 1.0.0.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +79,7 @@ Global
 		{7F8B5900-E629-4837-B69F-54EDD5A78C3E} = {25A524B0-AD3B-4975-A2C7-A4EB635F46C9}
 		{1E4CE0EF-E86A-4DA9-9474-982633BD1C93} = {3493F203-5FC9-44E1-9B7E-2D82A13BAB62}
 		{669E9551-DB1C-4556-AE02-8C5DA7C4BEB7} = {3493F203-5FC9-44E1-9B7E-2D82A13BAB62}
+		{C8DC276D-5FE9-421B-A86F-CE1DDF2880C8} = {4C63B916-A60A-4656-91F5-B2D6E13ADA96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B65702D4-8816-48C2-9F83-A57EABE17AFE}

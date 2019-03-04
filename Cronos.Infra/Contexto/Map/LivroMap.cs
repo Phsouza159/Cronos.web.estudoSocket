@@ -31,8 +31,8 @@ namespace Cronos.Infra.Contexto.Map
 
             builder
                 .Property(p => p.Valor)
-                .HasColumnName("AUTOR")
-                .HasColumnType("varchar(35)");
+                .HasColumnName("VALOR")
+                .HasColumnType("double");
 
             builder
                 .Property(p => p.NumPaginas)

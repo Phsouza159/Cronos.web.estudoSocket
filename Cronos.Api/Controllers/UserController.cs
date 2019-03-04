@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Cronos.Api.Controllers.Base;
 using Cronos.Domain.Entidades;
 using Cronos.Domain.Interfaces.Map;
 using Cronos.Domain.Interfaces.Repositorio;
@@ -15,18 +16,16 @@ namespace Cronos.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [DisableCors]
-    public class UserController : ControllerBase
+    public class UserController : ApiBase
     {
         IMapeamento _Mapper { get; set; }
         IUsuarioServico UsuarioServico { get; set; }
-        IRepositorioCommit DbService { get; set; }
 
-        public UserController(IMapeamento mapeamento , IUsuarioServico usuarioServico , IRepositorioCommit DbService)
+        public UserController(IMapeamento mapeamento , IUsuarioServico usuarioServico , IRepositorioCommit DbService , IAutentificacaoServico AutentificacaoServico)
+            :base(DbService , AutentificacaoServico)
         {
             _Mapper = mapeamento;
             UsuarioServico = usuarioServico;
-            this.DbService = DbService;
         }
 
         // GET: api/User
@@ -43,22 +42,20 @@ namespace Cronos.Api.Controllers
             return "value";
         }
 
-        [HttpPost("{obj}")]
+        [HttpPost("{obj}" , Name = "Login")]
         public IActionResult Login([FromBody] LoginRequest data)
         {
-            return Ok(data);
+            return Ok(this.ValidarAcesso(data.Usuario, data.Senha));
         }
 
-        [HttpPost("{data}" , Name = "New")]
-        public IActionResult New([FromBody] UserRequest data)
-        {
-            Usuario user = _Mapper.MapUsuario(data);
+        //[HttpPost("{data}" , Name = "New")]
+        //public IActionResult New([FromBody] UserRequest data)
+        //{
+        //    Usuario user = _Mapper.MapUsuario(data);
+        //    UsuarioServico.AddUser(user);
 
-            UsuarioServico.AddUser(user);
-            DbService.Commit();
-
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
         // PUT: api/User/5
         [HttpPut("{id}")]

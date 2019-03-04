@@ -34,9 +34,6 @@ namespace Cronos.Api
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            AuthenticationOptions a = new AuthenticationOptions();
-            var b = new CorsPolicy();
-
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -56,8 +53,8 @@ namespace Cronos.Api
                 .AllowAnyHeader()
            );
 
-            // app.UseHsts();
-            // app.UseHttpsRedirection();
+            app.UseHsts();
+            //app.UseHttpsRedirection();
             app.UseCookiePolicy();
             app.UseMvc();
 

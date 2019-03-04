@@ -11,6 +11,9 @@ namespace Cronos.Infra.Contexto.Map
         {
             builder.ToTable("CRONOS_005_AUTENTIFICACAO");
 
+            builder.Ignore( e => e.Situacao);
+            builder.Ignore(e => e.DataInclusao);
+
             builder
                 .HasKey(p => p.Id)
                 .HasName("ID");

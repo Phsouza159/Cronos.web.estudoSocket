@@ -14,5 +14,10 @@ namespace Cronos.Domain.Interfaces.Map
         /// Mapear UserRequest para Salario 
         /// </summary>
         Salario MapSalario(UserRequest request);
+
+        /// <summary>
+        /// Mapear LivroRequest para Livro
+        /// </summary>
+        Livro MapLivro(LivroRequest request);
     }
 }

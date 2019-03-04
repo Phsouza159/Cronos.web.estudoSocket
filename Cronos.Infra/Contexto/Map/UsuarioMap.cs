@@ -47,7 +47,7 @@ namespace Cronos.Infra.Contexto.Map
                 .HasColumnName("ID_TOKIEN")
                 .HasColumnType("int");
 
-           builder
+            builder
                 .HasOne(p => p.Autentificacao)
                 .WithOne(p => p.Usuario);
 

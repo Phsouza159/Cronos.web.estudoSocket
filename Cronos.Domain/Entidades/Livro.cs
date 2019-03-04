@@ -4,6 +4,7 @@ using Cronos.Domain.Interfaces.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using prmToolkit.NotificationPattern;
 
 namespace Cronos.Domain.Entidades
 {
@@ -26,6 +27,10 @@ namespace Cronos.Domain.Entidades
 
         public Livro Valid()
         {
+            new AddNotifications<Livro>(this)
+                .IfContains(e => e.Titulo , "" , "O campo Titulo não pode ser nulo")
+                .IfNull(e => e.Titulo);
+
             return this;
         }
 

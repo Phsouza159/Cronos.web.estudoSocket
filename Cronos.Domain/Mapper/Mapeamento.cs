@@ -24,6 +24,14 @@ namespace Cronos.Domain.Mapper
                     .ForPath(e => e.SoudoBruto , p => p.MapFrom(prop => Convert.ToDouble(prop.SoudoBruto)) )
                     .ForPath(e => e.SoudoLiquido, p => p.MapFrom(prop => Convert.ToDouble(prop.SoudoLiquido)))
                     .ForPath(e => e.Situacao, p => p.MapFrom(prop => true ));
+
+               cfg.CreateMap<LivroRequest, Livro>()
+                    .ForPath(e => e.NumPaginas, p => p.MapFrom(prop => Convert.ToDouble( prop.NumPaginas )))
+                    .ForPath(e => e.Valor, p => p.MapFrom(prop => Convert.ToDouble( prop.Valor )))
+                    .ForPath(e => e.Situacao, p => p.MapFrom(prop => true))
+                    .ForPath(e => e.DataInclusao, p => p.MapFrom(prop => DateTime.Now))
+                    .ForPath(e => e.Situacao, p => p.MapFrom(prop => true ))
+                    .ForPath(e => e.Lido, p => p.MapFrom(prop => false));
             });
 
             this._Mapper = configuration.CreateMapper();
@@ -39,6 +47,11 @@ namespace Cronos.Domain.Mapper
         public Salario MapSalario(UserRequest request)
         {
             return _Mapper.Map<Salario>(request);
+        }
+
+        public Livro MapLivro(LivroRequest request)
+        {
+            return _Mapper.Map<Livro>(request);
         }
     }
 }
