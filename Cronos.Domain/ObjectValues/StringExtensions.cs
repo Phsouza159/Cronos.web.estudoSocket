@@ -15,7 +15,7 @@ namespace Cronos.Domain.ObjectValues
             var data = md5.ComputeHash(Encoding.Default.GetBytes(password));
             var sbString = new StringBuilder();
             foreach (var t in data)
-                sbString.Append(t.ToString("x2"));
+                sbString.Append(t.ToString("x4"));
 
             return sbString.ToString();
         }

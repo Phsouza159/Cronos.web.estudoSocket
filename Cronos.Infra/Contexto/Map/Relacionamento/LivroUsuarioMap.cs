@@ -33,6 +33,21 @@ namespace Cronos.Infra.Contexto.Map.Relacionamento
                 .HasColumnType("int");
 
             builder
+                .Property(p => p.Inicio)
+                .HasColumnName("DTH_LEITURA_INICIO")
+                .HasColumnType("datetime");
+
+            builder
+                .Property(p => p.Fim)
+                .HasColumnName("DTH_LEITURA_FIM")
+                .HasColumnType("datetime");
+
+            builder
+                .Property(p => p.Lido)
+                .HasColumnName("LIDO")
+                .HasColumnType("bit");
+
+            builder
                 .Property(p => p.DataInclusao)
                 .HasColumnName("DTH_INCLUSAO")
                 .HasColumnType("datetime");

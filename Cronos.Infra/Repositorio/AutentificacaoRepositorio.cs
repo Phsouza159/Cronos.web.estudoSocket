@@ -16,7 +16,7 @@ namespace Cronos.Infra.Repositorio
 
         public Usuario GetTokien(string Tokien)
         {
-            if(_db.Autentificacao.Any(e => e.Tokien.Equals(Tokien)))
+            if(_db.Autentificacao.Any(e => e.Tokien.Equals(Tokien) && ( e.DataExpiracao < DateTime.Now)))
             { 
                return _db.Autentificacao
                            .Include( e => e.Usuario)
@@ -28,7 +28,7 @@ namespace Cronos.Infra.Repositorio
 
         public bool ValidarTokien(string Tokien)
         {
-            return _db.Autentificacao.Any(p => p.Tokien.Equals(Tokien));
+            return _db.Autentificacao.Any(e => e.Tokien.Equals(Tokien) && (e.DataExpiracao < DateTime.Now));
         }
     }
 }

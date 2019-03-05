@@ -21,9 +21,7 @@ namespace Cronos.Domain.Entidades
         public double? Valor { get ; set ; }
         public int? NumPaginas { get ; set ; }
         public short? Status { get ; set ; }
-        public bool? Lido { get; set; }
-        public DateTime? Inicio { get; set; }
-        public DateTime? Fim { get; set; }
+
 
         public Livro Valid()
         {

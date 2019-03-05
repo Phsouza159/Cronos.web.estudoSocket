@@ -9,6 +9,11 @@ namespace Cronos.Domain.Interfaces.Servico
     public interface IAutentificacaoServico : INotifiable
     {
         /// <summary>
+        /// Recuperar Usuario pelo Tokien ativo
+        /// </summary>
+        Usuario RecuperarPeloTokien(string tokien);
+
+        /// <summary>
         /// Efetuar login e retornar um tokien
         /// </summary>
         string Login(string User, string Senha);

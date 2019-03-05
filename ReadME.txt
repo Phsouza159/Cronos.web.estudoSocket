@@ -4,10 +4,12 @@
 // ==========================================
 
 ** Bugs Conhecidos:
-geracao do tokien criando um novo item , fazer ele atualizar o existente
 
 -----------------------------------------------------------------------
 gerar dispose
+
+05/03/2019
+-- ajuste tabela leivro | livroUsuario
 
 --/02/2019 - 04/03/2019
 criacao da base!

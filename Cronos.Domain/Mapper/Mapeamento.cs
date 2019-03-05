@@ -30,8 +30,7 @@ namespace Cronos.Domain.Mapper
                     .ForPath(e => e.Valor, p => p.MapFrom(prop => Convert.ToDouble( prop.Valor )))
                     .ForPath(e => e.Situacao, p => p.MapFrom(prop => true))
                     .ForPath(e => e.DataInclusao, p => p.MapFrom(prop => DateTime.Now))
-                    .ForPath(e => e.Situacao, p => p.MapFrom(prop => true ))
-                    .ForPath(e => e.Lido, p => p.MapFrom(prop => false));
+                    .ForPath(e => e.Situacao, p => p.MapFrom(prop => true ));
             });
 
             this._Mapper = configuration.CreateMapper();

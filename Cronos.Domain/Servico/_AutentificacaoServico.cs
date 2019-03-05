@@ -20,6 +20,13 @@ namespace Cronos.Domain.Servico
         private IUsuarioRepositorio UsuarioDAO { get; set; }
         private IAutentificacaoRepositorio AutentificacaoDAO { get; set; }
 
+        public Usuario RecuperarPeloTokien(string tokien)
+        {
+            Usuario usuario = AutentificacaoDAO.GetTokien(tokien);
+
+            return usuario;
+        }
+
         public string Login(string User, string Senha)
         {
             Usuario Usuario = UsuarioDAO.Login(User, Senha);

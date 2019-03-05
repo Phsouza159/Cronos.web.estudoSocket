@@ -14,8 +14,5 @@ namespace Cronos.Domain.Interfaces.Entidades
         double? Valor { get; set; }
         int? NumPaginas { get; set; }
         short? Status { get; set; }
-        bool? Lido { get; set; }
-        DateTime? Inicio { get; set; }
-        DateTime? Fim { get; set; }
     }
 }
