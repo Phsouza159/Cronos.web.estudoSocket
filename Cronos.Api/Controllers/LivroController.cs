@@ -4,6 +4,7 @@ using Cronos.Domain.Interfaces.Map;
 using Cronos.Domain.Interfaces.Repositorio;
 using Cronos.Domain.Interfaces.Servico;
 using Cronos.Domain.Request;
+using Cronos.Domain.Response;
 using Cronos.Domain.Servico;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,17 +27,44 @@ namespace Cronos.Api.Controllers
             this.LivroServico = LivroServico;
             this._Mapeamento = _Mapeamento;
         }
+    
+        [HttpGet("{Tokien}", Name = "Get")]
+        public IActionResult Get(string Tokien)
+        {
+            string NewTokien = this.ValidarAcesso(Tokien);
+
+            if (NewTokien != String.Empty)
+            {
+                LivroResponse response = new LivroResponse()
+                {
+                    Tokien = NewTokien,
+                    Livros = LivroServico.GetByLivroUsuario(this.UserLogado.Id)
+                };
+
+                return Ok(response);
+            }
+            return NotFound();
+        }
 
         [HttpPost("{obj}", Name = "Adicionar")]
         public IActionResult Adicionar([FromBody] LivroRequest request)
         {
-            Livro livro = _Mapeamento.MapLivro(request);
+            string NewTokien = this.ValidarAcesso(request.Tokien);
 
-            LivroServico.Add(livro.Valid());
+            if (NewTokien != null )
+            {
+                Livro livro = _Mapeamento.MapLivro(request);
 
-            return Ok(this.Commit( request, livro));
+                LivroServico.Add(livro.Valid());
+                LivroServico.Vincular(livro.Id , this.UserLogado.Id);
 
+                CommitRespose respose = this.Commit(request, livro);
+
+                respose.Tokien = NewTokien;
+
+                return Ok(respose);
+            }
+            return NotFound();
         }
-
     }
 }

@@ -26,7 +26,6 @@ namespace Cronos.Domain.Entidades
         public Livro Valid()
         {
             new AddNotifications<Livro>(this)
-                .IfContains(e => e.Titulo , "" , "O campo Titulo não pode ser nulo")
                 .IfNull(e => e.Titulo);
 
             return this;

@@ -3,6 +3,7 @@ using Cronos.Domain.Entidades;
 using Cronos.Domain.Interfaces.Map;
 using Cronos.Domain.ObjectValues;
 using Cronos.Domain.Request;
+using Cronos.Domain.Response;
 using System;
 
 namespace Cronos.Domain.Mapper
@@ -17,6 +18,7 @@ namespace Cronos.Domain.Mapper
 
                 cfg.CreateMap<UserRequest, Usuario>()
                     .ForPath(e => e.DataInclusao, p => p.MapFrom(prop => DateTime.Now))
+                    .ForPath(e => e.User, p => p.MapFrom(prop => prop.NomeUser))
                     .ForPath(e => e.Password, p => p.MapFrom(prop => prop.Senha.ConvertToMD5()))
                     .ForPath(e => e.Situacao, p => p.MapFrom(prop => true));
 
@@ -31,6 +33,9 @@ namespace Cronos.Domain.Mapper
                     .ForPath(e => e.Situacao, p => p.MapFrom(prop => true))
                     .ForPath(e => e.DataInclusao, p => p.MapFrom(prop => DateTime.Now))
                     .ForPath(e => e.Situacao, p => p.MapFrom(prop => true ));
+
+               cfg.CreateMap<Usuario, UserResponse>();
+
             });
 
             this._Mapper = configuration.CreateMapper();
@@ -51,6 +56,11 @@ namespace Cronos.Domain.Mapper
         public Livro MapLivro(LivroRequest request)
         {
             return _Mapper.Map<Livro>(request);
+        }
+
+        public UserResponse MapUserResponse(Usuario request)
+        {
+            return _Mapper.Map<UserResponse>(request);
         }
     }
 }

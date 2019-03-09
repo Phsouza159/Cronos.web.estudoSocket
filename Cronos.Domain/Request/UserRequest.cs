@@ -15,6 +15,6 @@ namespace Cronos.Domain.Request
 
         public string SoudoBruto { get; set; }
         public string SoudoLiquido { get; set; }
-        public DateTime DataPagemento { get; set; }
+        public DateTime? DataPagemento { get; set; }
     }
 }

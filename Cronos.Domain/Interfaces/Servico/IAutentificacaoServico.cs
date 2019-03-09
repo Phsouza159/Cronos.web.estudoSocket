@@ -1,4 +1,5 @@
 ﻿using Cronos.Domain.Entidades;
+using Cronos.Domain.Response;
 using prmToolkit.NotificationPattern;
 using System;
 using System.Collections.Generic;
@@ -16,12 +17,17 @@ namespace Cronos.Domain.Interfaces.Servico
         /// <summary>
         /// Efetuar login e retornar um tokien
         /// </summary>
-        string Login(string User, string Senha);
+        UserResponse Login(string User, string Senha);
 
         /// <summary>
         /// Validar tokein
         /// </summary>
         string ValidarTokien(string Tokien);
+
+        /// <summary>
+        /// Efetuar logoff
+        /// </summary>
+        bool LogOff(string Tokien);
 
         /// <summary>
         /// Gerar tokien

@@ -24,18 +24,32 @@ namespace Cronos.Api.Controllers.Base
             this.AutentificacaoServico = AutentificacaoServico;
         }
 
+        protected bool EfetuarLogoff(string tokien)
+        {
+            return AutentificacaoServico.LogOff(tokien);
+        }
+
         protected string ValidarAcesso(string token)
         {
+            this.UserLogado = AutentificacaoServico.RecuperarPeloTokien(token);
+
+            if(UserLogado != null)
+            {
+                return AutentificacaoServico.GerarTokien(UserLogado.Id);
+            }
+
             return null;
         }
 
-        protected string ValidarAcesso(string user , string senha)
+        protected UserResponse ValidarAcesso(string user , string senha)
         {
-            string tokien = AutentificacaoServico.Login(user ,senha);
+            UserResponse resp = AutentificacaoServico.Login(user ,senha);
 
             var nullablal = this.Commit(new object() , AutentificacaoServico);
+            if(nullablal.Salve)
+                return resp;
 
-            return tokien;
+            return null;
         }
 
 

@@ -13,5 +13,15 @@ namespace Cronos.Domain.Interfaces.Servico
         /// Adicionar um novo livro
         /// </summary>
         void Add(Livro request);
+
+        /// <summary>
+        /// Vincular livro a um usuario
+        /// </summary>
+        void Vincular(int IdLivro, int IdUser);
+
+        /// <summary>
+        /// Recupearar Lista de Livros pelo vinculo do usuario 
+        /// </summary>
+        List<Livro> GetByLivroUsuario(int IdUSer);
     }
 }

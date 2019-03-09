@@ -1,0 +1,9 @@
+J:\Projetos\Cronos.Web\Cronos.Mapper\bin\Release\netcoreapp2.1\Cronos.Mapper.deps.json
+J:\Projetos\Cronos.Web\Cronos.Mapper\bin\Release\netcoreapp2.1\Cronos.Mapper.dll
+J:\Projetos\Cronos.Web\Cronos.Mapper\bin\Release\netcoreapp2.1\Cronos.Mapper.pdb
+J:\Projetos\Cronos.Web\Cronos.Mapper\obj\Release\netcoreapp2.1\Cronos.Mapper.csprojAssemblyReference.cache
+J:\Projetos\Cronos.Web\Cronos.Mapper\obj\Release\netcoreapp2.1\Cronos.Mapper.csproj.CoreCompileInputs.cache
+J:\Projetos\Cronos.Web\Cronos.Mapper\obj\Release\netcoreapp2.1\Cronos.Mapper.AssemblyInfoInputs.cache
+J:\Projetos\Cronos.Web\Cronos.Mapper\obj\Release\netcoreapp2.1\Cronos.Mapper.AssemblyInfo.cs
+J:\Projetos\Cronos.Web\Cronos.Mapper\obj\Release\netcoreapp2.1\Cronos.Mapper.dll
+J:\Projetos\Cronos.Web\Cronos.Mapper\obj\Release\netcoreapp2.1\Cronos.Mapper.pdb

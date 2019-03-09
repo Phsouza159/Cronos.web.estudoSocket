@@ -48,9 +48,11 @@ namespace Cronos.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseCors(builder => builder.WithOrigins("http://127.0.0.1" , "http://localhost")
-                .AllowAnyMethod()
-                .AllowAnyHeader()
+            app.UseCors(builder => 
+                builder.WithOrigins("http://127.0.0.1", "http://127.0.0.1:8080", "http://localhost")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowAnyOrigin()
            );
 
             app.UseHsts();

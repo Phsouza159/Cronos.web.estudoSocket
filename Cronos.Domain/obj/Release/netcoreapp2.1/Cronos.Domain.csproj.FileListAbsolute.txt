@@ -1,0 +1,14 @@
+J:\Projetos\Cronos.Web\Cronos.Domain\bin\Release\netcoreapp2.1\Cronos.Domain.deps.json
+J:\Projetos\Cronos.Web\Cronos.Domain\bin\Release\netcoreapp2.1\Cronos.Domain.dll
+J:\Projetos\Cronos.Web\Cronos.Domain\bin\Release\netcoreapp2.1\Cronos.Domain.pdb
+J:\Projetos\Cronos.Web\Cronos.Domain\bin\Release\netcoreapp2.1\Newtonsoft.Json.dll
+J:\Projetos\Cronos.Web\Cronos.Domain\bin\Release\netcoreapp2.1\prmToolkit.NotificationPattern.dll
+J:\Projetos\Cronos.Web\Cronos.Domain\bin\Release\netcoreapp2.1\prmToolkit.NotificationPattern.pdb
+J:\Projetos\Cronos.Web\Cronos.Domain\bin\Release\netcoreapp2.1\en-US\prmToolkit.NotificationPattern.resources.dll
+J:\Projetos\Cronos.Web\Cronos.Domain\obj\Release\netcoreapp2.1\Cronos.Domain.csprojAssemblyReference.cache
+J:\Projetos\Cronos.Web\Cronos.Domain\obj\Release\netcoreapp2.1\Cronos.Domain.csproj.CoreCompileInputs.cache
+J:\Projetos\Cronos.Web\Cronos.Domain\obj\Release\netcoreapp2.1\Cronos.Domain.AssemblyInfoInputs.cache
+J:\Projetos\Cronos.Web\Cronos.Domain\obj\Release\netcoreapp2.1\Cronos.Domain.AssemblyInfo.cs
+J:\Projetos\Cronos.Web\Cronos.Domain\obj\Release\netcoreapp2.1\Cronos.Domain.csproj.CopyComplete
+J:\Projetos\Cronos.Web\Cronos.Domain\obj\Release\netcoreapp2.1\Cronos.Domain.dll
+J:\Projetos\Cronos.Web\Cronos.Domain\obj\Release\netcoreapp2.1\Cronos.Domain.pdb

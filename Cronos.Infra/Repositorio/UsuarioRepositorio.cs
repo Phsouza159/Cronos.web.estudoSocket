@@ -28,8 +28,8 @@ namespace Cronos.Infra.Repositorio
         {
             string Password = Senha.ConvertToMD5();
 
-            if (_db.Usuario.Any(p => p.Nome.Equals(User) && p.Password.Equals(Password)))
-                return _db.Usuario.Where(p => p.Nome.Equals(User) && p.Password.Equals(Password)).First();
+            if (_db.Usuario.Any(p => p.User.Equals(User) && p.Password.Equals(Password)))
+                return _db.Usuario.Include(e => e.Autentificacao).Where(p => p.User.Equals(User) && p.Password.Equals(Password)).First();
 
             return null;
         }

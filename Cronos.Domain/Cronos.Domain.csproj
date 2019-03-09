@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Response\UserResponse.cs~RF8971739.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Response\Base\" />
   </ItemGroup>
 

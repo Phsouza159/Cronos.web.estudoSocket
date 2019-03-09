@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cronos.Domain.Entidades.Relacionamentos;
+using System;
 
 namespace Cronos.Domain.Interfaces.Entidades.Relacionamentos
 {
@@ -12,5 +13,7 @@ namespace Cronos.Domain.Interfaces.Entidades.Relacionamentos
         DateTime? Fim { get; set; }
         bool Situacao { get; set; }
         DateTime DataInclusao { get; set; }
+
+        LivroUsuario Valid();
     }
 }

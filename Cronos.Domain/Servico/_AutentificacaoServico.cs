@@ -1,7 +1,9 @@
 ﻿using Cronos.Domain.Entidades;
+using Cronos.Domain.Interfaces.Map;
 using Cronos.Domain.Interfaces.Repositorio;
 using Cronos.Domain.Interfaces.Servico;
 using Cronos.Domain.ObjectValues;
+using Cronos.Domain.Response;
 using prmToolkit.NotificationPattern;
 using System;
 using System.Collections.Generic;
@@ -11,10 +13,13 @@ namespace Cronos.Domain.Servico
 {
     public class _AutentificacaoServico : Notifiable , IAutentificacaoServico
     {
-        public _AutentificacaoServico(IUsuarioRepositorio usuarioDAO , IAutentificacaoRepositorio AutentificacaoDAO)
+        private IMapeamento _Mapper { get; set; }
+
+        public _AutentificacaoServico(IUsuarioRepositorio usuarioDAO , IAutentificacaoRepositorio AutentificacaoDAO , IMapeamento _Mapper)
         {
             UsuarioDAO = usuarioDAO;
             this.AutentificacaoDAO = AutentificacaoDAO;
+            this._Mapper = _Mapper;
         }
 
         private IUsuarioRepositorio UsuarioDAO { get; set; }
@@ -22,16 +27,20 @@ namespace Cronos.Domain.Servico
 
         public Usuario RecuperarPeloTokien(string tokien)
         {
-            Usuario usuario = AutentificacaoDAO.GetTokien(tokien);
+            Usuario usuario = AutentificacaoDAO.GetTokien(tokien.ConvertToMD5());
 
             return usuario;
         }
 
-        public string Login(string User, string Senha)
+        public UserResponse Login(string User, string Senha)
         {
             Usuario Usuario = UsuarioDAO.Login(User, Senha);
             if(Usuario != null)
-                return this.GerarTokien(Usuario);
+            {
+                UserResponse resp = _Mapper.MapUserResponse(Usuario);
+                resp.Tokien = this.GerarTokien(Usuario);
+                return resp;
+            }
             return null;
         }
 
@@ -104,6 +113,18 @@ namespace Cronos.Domain.Servico
             AutentificacaoDAO.UpDate(Usuario.Autentificacao);
 
             return Tokien;
+        }
+
+        public bool LogOff(string Tokien)
+        {
+            Usuario usuario = this.RecuperarPeloTokien(Tokien);
+
+            if (usuario.Equals(null) || usuario.Autentificacao.Equals(null))
+                return false;
+
+            usuario.Autentificacao.DataExpiracao = DateTime.Now;
+
+            return this.AutentificacaoDAO.UpDate(usuario.Autentificacao);
         }
     }
 }

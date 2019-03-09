@@ -19,5 +19,11 @@ namespace Cronos.Domain.Entidades.Relacionamentos
 
         public virtual Usuario Usuario { get; set; }
         public virtual Livro Livro { get; set; }
+
+        public LivroUsuario Valid()
+        {
+
+            return this;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Cronos.Domain.Entidades;
 using Cronos.Domain.Request;
+using Cronos.Domain.Response;
 
 namespace Cronos.Domain.Interfaces.Map
 {
@@ -19,5 +20,10 @@ namespace Cronos.Domain.Interfaces.Map
         /// Mapear LivroRequest para Livro
         /// </summary>
         Livro MapLivro(LivroRequest request);
+
+        /// <summary>
+        /// usuario para UserResponse
+        /// </summary>
+        UserResponse MapUserResponse(Usuario request);
     }
 }

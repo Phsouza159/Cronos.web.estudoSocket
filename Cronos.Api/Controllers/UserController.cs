@@ -21,46 +21,28 @@ namespace Cronos.Api.Controllers
         IMapeamento _Mapper { get; set; }
         IUsuarioServico UsuarioServico { get; set; }
 
-        public UserController(IMapeamento mapeamento , IUsuarioServico usuarioServico , IRepositorioCommit DbService , IAutentificacaoServico AutentificacaoServico)
-            :base(DbService , AutentificacaoServico)
+        public UserController(IMapeamento mapeamento, IUsuarioServico usuarioServico, IRepositorioCommit DbService, IAutentificacaoServico AutentificacaoServico)
+            : base(DbService, AutentificacaoServico)
         {
             _Mapper = mapeamento;
             UsuarioServico = usuarioServico;
         }
 
-        // GET: api/User
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpPost("{data}")]
+        public IActionResult Novo([FromBody] UserRequest data)
         {
-            return new string[] { "value1", "value2" };
-        }
+            string tokien = "";
 
-        // GET: api/User/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+            Usuario user = _Mapper.MapUsuario(data);
+            UsuarioServico.AddUser(user);
 
-        [HttpPost("{obj}" , Name = "Login")]
-        public IActionResult Login([FromBody] LoginRequest data)
-        {
-            return Ok(this.ValidarAcesso(data.Usuario, data.Senha));
-        }
+            var obj = this.Commit(new object(), UsuarioServico);
+            var resp = this.ValidarAcesso(data.NomeUser, data.Senha);
 
-        //[HttpPost("{data}" , Name = "New")]
-        //public IActionResult New([FromBody] UserRequest data)
-        //{
-        //    Usuario user = _Mapper.MapUsuario(data);
-        //    UsuarioServico.AddUser(user);
+            obj = this.Commit(new object(), UsuarioServico);
+            resp.Tokien = tokien;
 
-        //    return Ok();
-        //}
-
-        // PUT: api/User/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
+            return Ok(resp);
         }
 
         // DELETE: api/ApiWithActions/5

@@ -1,0 +1,14 @@
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard1.0\prmToolkit.NotificationPattern.deps.json
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard1.0\prmToolkit.NotificationPattern.dll
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard1.0\prmToolkit.NotificationPattern.pdb
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard1.0\en-US\prmToolkit.NotificationPattern.resources.dll
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.csprojAssemblyReference.cache
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.Resources.Message.resources
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.Resources.Message.en-US.resources
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.csproj.GenerateResource.cache
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.csproj.CoreCompileInputs.cache
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.AssemblyInfoInputs.cache
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.AssemblyInfo.cs
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\en-US\prmToolkit.NotificationPattern.resources.dll
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.dll
+D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard1.0\prmToolkit.NotificationPattern.pdb

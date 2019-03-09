@@ -1,0 +1,12 @@
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\bin\Release\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.deps.json
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\bin\Release\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.dll
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\bin\Release\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.pdb
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\EFCore.MySql.csprojAssemblyReference.cache
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.Properties.MySqlStrings.resources
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.Strings.resources
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\EFCore.MySql.csproj.GenerateResource.cache
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\EFCore.MySql.csproj.CoreCompileInputs.cache
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\EFCore.MySql.AssemblyInfoInputs.cache
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\EFCore.MySql.AssemblyInfo.cs
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.dll
+J:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Release\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.pdb
