@@ -1,7 +1,9 @@
 ﻿using Cronos.Domain.Entidades;
 using Cronos.Domain.Entidades.Relacionamentos;
+using Cronos.Domain.Entidades.Tipos;
 using Cronos.Infra.Contexto.Map;
 using Cronos.Infra.Contexto.Map.Relacionamento;
+using Cronos.Infra.Contexto.Map.Tipos;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cronos.Infra.Contexto
@@ -35,6 +37,12 @@ namespace Cronos.Infra.Contexto
              * Relacionamentos
              */
             modelBuilder.ApplyConfiguration(new LivroUsuarioMap());
+
+            /**
+             * Tipos
+             */
+
+            modelBuilder.ApplyConfiguration(new LivroCategoriaMap());
         }
 
         public DbSet<Usuario> Usuario  { get; set; }
@@ -48,5 +56,9 @@ namespace Cronos.Infra.Contexto
          */
         public DbSet<LivroUsuario> LivroUsuario { get; set; }
 
+        /**
+         * Tipos
+         */
+        public DbSet<LivroCategoria> LivroCategoria { get; set; }
     }
 }

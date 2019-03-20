@@ -6,6 +6,6 @@ namespace Cronos.Domain.Interfaces.Repositorio
 {
     public interface ILivroUsuarioRepositorio : IRepositorioBase<LivroUsuario , int>
     {
-        List<Livro> GetByUsuario(int IdUser);
+        List<LivroUsuario> GetByUsuario(int IdUser);
     }
 }

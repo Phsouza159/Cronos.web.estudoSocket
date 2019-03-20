@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Enum\" />
     <Folder Include="Response\Base\" />
   </ItemGroup>
 

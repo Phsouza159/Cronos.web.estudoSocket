@@ -45,15 +45,20 @@ namespace Cronos.Api.Controllers.Base
         {
             UserResponse resp = AutentificacaoServico.Login(user ,senha);
 
-            var nullablal = this.Commit(new object() , AutentificacaoServico);
+            var nullablal = this.Commit(new object() , String.Empty , AutentificacaoServico);
             if(nullablal.Salve)
                 return resp;
 
             return null;
         }
 
+        protected bool Commit()
+        {
+            return DbService.Commit();
+        }
 
-        protected CommitRespose Commit(object obj ,params INotifiable[] notifications)
+
+        protected CommitRespose Commit(object obj , string tokien ,params INotifiable[] notifications)
         {
             CommitRespose respose = new CommitRespose();
             respose.Notificaceos = new List<string>();
@@ -77,7 +82,7 @@ namespace Cronos.Api.Controllers.Base
 
             respose.Salve = true;
             respose.Response = obj;
-            respose.Tokien = "";
+            respose.Tokien = tokien;
             return respose;
         }
     }

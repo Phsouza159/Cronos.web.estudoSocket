@@ -1,3 +1,5 @@
+H:\Projetos\Cronos.Web\Cronos.Mapper\obj\Debug\netcoreapp2.1\Cronos.Mapper.dll
+H:\Projetos\Cronos.Web\Cronos.Mapper\obj\Debug\netcoreapp2.1\Cronos.Mapper.pdb
 J:\Projetos\Cronos.Web\Cronos.Mapper\bin\Debug\netcoreapp2.1\Cronos.Mapper.deps.json
 J:\Projetos\Cronos.Web\Cronos.Mapper\bin\Debug\netcoreapp2.1\Cronos.Mapper.dll
 J:\Projetos\Cronos.Web\Cronos.Mapper\bin\Debug\netcoreapp2.1\Cronos.Mapper.pdb

@@ -20,6 +20,7 @@ namespace Cronos.Domain.Interfaces.Map
         /// Mapear LivroRequest para Livro
         /// </summary>
         Livro MapLivro(LivroRequest request);
+        ListLivroResponse MapLivro(Livro livro);
 
         /// <summary>
         /// usuario para UserResponse

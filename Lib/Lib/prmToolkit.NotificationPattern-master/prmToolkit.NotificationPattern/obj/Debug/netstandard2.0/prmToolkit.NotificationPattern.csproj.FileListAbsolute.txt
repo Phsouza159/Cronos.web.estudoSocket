@@ -12,6 +12,8 @@ D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPa
 D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.dll
 D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.pdb
 D:\EasyPHP-Devserver-17\eds-www\SGPF_core\SGFP\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.csprojAssemblyReference.cache
+H:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.dll
+H:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.pdb
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard2.0\prmToolkit.NotificationPattern.deps.json
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard2.0\prmToolkit.NotificationPattern.dll
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard2.0\prmToolkit.NotificationPattern.pdb

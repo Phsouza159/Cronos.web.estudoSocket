@@ -16,12 +16,12 @@ namespace Cronos.Infra.Repositorio
         {
         }
 
-        public List<Livro> GetByUsuario(int IdUser)
+        public List<LivroUsuario> GetByUsuario(int IdUser)
         {
             return _db.LivroUsuario
                         .Include(e => e.Livro)
+                        .Include(e => e.Livro.LivroCategoria)
                         .Where(e => e.IdUsuario.Equals(IdUser))
-                        .Select( e => e.Livro)
                         .ToList();
         }
     }

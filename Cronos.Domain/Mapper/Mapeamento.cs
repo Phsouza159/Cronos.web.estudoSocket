@@ -5,6 +5,7 @@ using Cronos.Domain.ObjectValues;
 using Cronos.Domain.Request;
 using Cronos.Domain.Response;
 using System;
+using System.Collections.Generic;
 
 namespace Cronos.Domain.Mapper
 {
@@ -30,12 +31,17 @@ namespace Cronos.Domain.Mapper
                cfg.CreateMap<LivroRequest, Livro>()
                     .ForPath(e => e.NumPaginas, p => p.MapFrom(prop => Convert.ToDouble( prop.NumPaginas )))
                     .ForPath(e => e.Valor, p => p.MapFrom(prop => Convert.ToDouble( prop.Valor )))
+                    .ForPath(e => e.IdCategoria , p => p.MapFrom( prop => Convert.ToInt32( prop.IdCategoria)))
                     .ForPath(e => e.Situacao, p => p.MapFrom(prop => true))
                     .ForPath(e => e.DataInclusao, p => p.MapFrom(prop => DateTime.Now))
                     .ForPath(e => e.Situacao, p => p.MapFrom(prop => true ));
 
                cfg.CreateMap<Usuario, UserResponse>();
 
+               cfg.CreateMap<Livro, ListLivroResponse>()
+                    .ForPath(e => e.Categoria , p => p.MapFrom( prop => prop.LivroCategoria.DescricaoCategoria));
+
+                cfg.CreateMap<LivroRequest, Livro>();
             });
 
             this._Mapper = configuration.CreateMapper();
@@ -55,7 +61,21 @@ namespace Cronos.Domain.Mapper
 
         public Livro MapLivro(LivroRequest request)
         {
-            return _Mapper.Map<Livro>(request);
+            Livro resp = new Livro();
+            try {
+                resp = _Mapper.Map<Livro>(request);
+                resp.NumPaginas = Convert.ToInt32(request.NumPaginas);
+            }
+            catch (Exception e)
+            {
+
+            }
+            return resp;
+        }
+
+        public ListLivroResponse MapLivro(Livro livro)
+        {
+            return _Mapper.Map<ListLivroResponse>(livro);
         }
 
         public UserResponse MapUserResponse(Usuario request)

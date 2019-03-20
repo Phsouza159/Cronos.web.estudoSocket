@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using prmToolkit.NotificationPattern;
+using Cronos.Domain.Entidades.Tipos;
 
 namespace Cronos.Domain.Entidades
 {
@@ -21,6 +22,7 @@ namespace Cronos.Domain.Entidades
         public double? Valor { get ; set ; }
         public int? NumPaginas { get ; set ; }
         public short? Status { get ; set ; }
+        public int IdCategoria { get; set; }
 
 
         public Livro Valid()
@@ -32,5 +34,6 @@ namespace Cronos.Domain.Entidades
         }
 
         public virtual List<LivroUsuario> LivroUsuario { get; set; }
+        public virtual LivroCategoria LivroCategoria { get; set; }
     }
 }

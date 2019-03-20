@@ -1,3 +1,5 @@
+H:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Debug\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.dll
+H:\Projetos\Cronos.Web\Lib\EFCore.MySql\obj\Debug\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.pdb
 J:\Projetos\Cronos.Web\Lib\EFCore.MySql\bin\Debug\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.deps.json
 J:\Projetos\Cronos.Web\Lib\EFCore.MySql\bin\Debug\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.dll
 J:\Projetos\Cronos.Web\Lib\EFCore.MySql\bin\Debug\netstandard2.0\Pomelo.EntityFrameworkCore.MySql.pdb

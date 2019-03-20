@@ -1,5 +1,6 @@
 ﻿using Cronos.Domain.Entidades;
 using Cronos.Domain.Request;
+using Cronos.Domain.Response;
 using prmToolkit.NotificationPattern;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,13 @@ namespace Cronos.Domain.Interfaces.Servico
         void Vincular(int IdLivro, int IdUser);
 
         /// <summary>
+        /// Editar um livro
+        /// </summary>
+        Livro Edit(Livro request);
+
+        /// <summary>
         /// Recupearar Lista de Livros pelo vinculo do usuario 
         /// </summary>
-        List<Livro> GetByLivroUsuario(int IdUSer);
+        List<ListLivroResponse> GetByLivroUsuario(int IdUSer);
     }
 }

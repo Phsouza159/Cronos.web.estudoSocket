@@ -36,10 +36,10 @@ namespace Cronos.Api.Controllers
             Usuario user = _Mapper.MapUsuario(data);
             UsuarioServico.AddUser(user);
 
-            var obj = this.Commit(new object(), UsuarioServico);
+            var obj = this.Commit(new object(), tokien , UsuarioServico);
             var resp = this.ValidarAcesso(data.NomeUser, data.Senha);
 
-            obj = this.Commit(new object(), UsuarioServico);
+            obj = this.Commit(new object(), tokien , UsuarioServico);
             resp.Tokien = tokien;
 
             return Ok(resp);

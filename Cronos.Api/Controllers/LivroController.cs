@@ -32,16 +32,15 @@ namespace Cronos.Api.Controllers
         public IActionResult Get(string Tokien)
         {
             string NewTokien = this.ValidarAcesso(Tokien);
-
-            if (NewTokien != String.Empty)
+            if (NewTokien != null)
             {
                 LivroResponse response = new LivroResponse()
                 {
                     Tokien = NewTokien,
                     Livros = LivroServico.GetByLivroUsuario(this.UserLogado.Id)
                 };
-
-                return Ok(response);
+                if(this.Commit())
+                    return Ok(response);
             }
             return NotFound();
         }
@@ -58,11 +57,22 @@ namespace Cronos.Api.Controllers
                 LivroServico.Add(livro.Valid());
                 LivroServico.Vincular(livro.Id , this.UserLogado.Id);
 
-                CommitRespose respose = this.Commit(request, livro);
+                return Ok(this.Commit(request, NewTokien, livro));
+            }
+            return NotFound();
+        }
 
-                respose.Tokien = NewTokien;
+        [HttpPut("{obj}", Name = "Editar")]
+        public IActionResult Editar([FromBody] LivroRequest request)
+        {
+            string NewTokien = this.ValidarAcesso(request.Tokien);
 
-                return Ok(respose);
+            if (NewTokien != null)
+            {
+                Livro Livro = _Mapeamento.MapLivro(request);
+                Livro LivroAtualizado = LivroServico.Edit(Livro);
+
+                return Ok(this.Commit(LivroAtualizado, NewTokien , LivroServico));
             }
             return NotFound();
         }

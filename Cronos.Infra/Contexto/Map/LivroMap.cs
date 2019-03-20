@@ -49,7 +49,15 @@ namespace Cronos.Infra.Contexto.Map
                 .HasColumnName("SITUACAO")
                 .HasColumnType("bit");
 
+            builder
+                .Property(p => p.IdCategoria)
+                .HasColumnName("ID_CAT")
+                .HasColumnType("int");
 
+            builder
+                .HasOne(p => p.LivroCategoria)
+                .WithMany(p => p.Livro)
+                .HasForeignKey(p => p.IdCategoria);
         }
     }
 }
