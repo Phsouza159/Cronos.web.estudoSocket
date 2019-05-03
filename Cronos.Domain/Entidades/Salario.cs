@@ -21,11 +21,11 @@ namespace Cronos.Domain.Entidades
             DataPagemento = dataPagemento;
         }
 
-        public double SoudoBruto { get; set; }
-        public double SoudoLiquido { get; set; }
-        public DateTime DataPagemento { get; set; }
+        public virtual double SoudoBruto { get; set; }
+        public virtual double SoudoLiquido { get; set; }
+        public virtual DateTime DataPagemento { get; set; }
 
-        public Salario Valid()
+        public virtual Salario Valid()
         {
             return this;
         }

@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cronos.Domain.Entidades
 {
-    public class Usuario : EntidadeBase , IUsuario
+    public class Usuario : EntidadeBase, IUsuario
     {
         public Usuario()
         {
@@ -23,28 +23,29 @@ namespace Cronos.Domain.Entidades
             Email = email;
         }
 
-        public string Nome { get; set; }
-        public string Sobrenome { get; set; }
-        public string User { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
+        public virtual string Nome { get; set; }
+        public virtual string Sobrenome { get; set; }
+        public virtual string User { get; set; }
+        public virtual string Password { get; set; }
+        public virtual string Email { get; set; }
 
         [ForeignKey("Salario")]
-        public int? IdSalario { get; set; }
+        public virtual int? IdSalario { get; set; }
 
         [ForeignKey("Autentificacao")]
-        public int? IdTokien { get; set; }
+        public virtual int? IdTokien { get; set; }
 
-        
-        public Usuario Valid()
+
+        public virtual Usuario Valid()
         {
             return this;
         }
 
-         
+
         public virtual Salario Salario { get; set; }
         public virtual Autentificacao Autentificacao { get; set; }
         public virtual List<Gasto> Gasto { get; set; }
         public virtual List<LivroUsuario> LivroUsuario { get; set; }
+        public virtual ICollection<Mensagem> Mensagens {get;set;}
     }
 }

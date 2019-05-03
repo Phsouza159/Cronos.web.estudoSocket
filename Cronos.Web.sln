@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mysql", "Mysql", "{C8DC276D
 		SQL\versao 1.0.0.sql = SQL\versao 1.0.0.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSockets.ws", "WebSockets\WebSockets.ws.csproj", "{56E625B6-3A07-4F2C-9A18-166B149F0331}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{669E9551-DB1C-4556-AE02-8C5DA7C4BEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669E9551-DB1C-4556-AE02-8C5DA7C4BEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{669E9551-DB1C-4556-AE02-8C5DA7C4BEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E625B6-3A07-4F2C-9A18-166B149F0331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E625B6-3A07-4F2C-9A18-166B149F0331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E625B6-3A07-4F2C-9A18-166B149F0331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E625B6-3A07-4F2C-9A18-166B149F0331}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{1E4CE0EF-E86A-4DA9-9474-982633BD1C93} = {3493F203-5FC9-44E1-9B7E-2D82A13BAB62}
 		{669E9551-DB1C-4556-AE02-8C5DA7C4BEB7} = {3493F203-5FC9-44E1-9B7E-2D82A13BAB62}
 		{C8DC276D-5FE9-421B-A86F-CE1DDF2880C8} = {4C63B916-A60A-4656-91F5-B2D6E13ADA96}
+		{56E625B6-3A07-4F2C-9A18-166B149F0331} = {553E1129-D9B5-4732-9759-A10CB8E2AD3A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B65702D4-8816-48C2-9F83-A57EABE17AFE}

@@ -33,6 +33,8 @@ namespace Cronos.Infra.Contexto
 
             modelBuilder.ApplyConfiguration(new AutentificacaoMap());
 
+            modelBuilder.ApplyConfiguration(new MensagemMap());
+
             /**
              * Relacionamentos
              */
@@ -49,6 +51,7 @@ namespace Cronos.Infra.Contexto
         public DbSet<Livro> Livro { get; set; }
         public DbSet<Gasto> Gasto { get; set; }
         public DbSet<Salario> salario { get; set; }
+        public DbSet<Mensagem> Mensagem { get; set; }
         public DbSet<Autentificacao> Autentificacao { get; set; }
 
         /**

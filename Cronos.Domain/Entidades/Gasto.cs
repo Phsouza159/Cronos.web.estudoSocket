@@ -13,14 +13,14 @@ namespace Cronos.Domain.Entidades
 
         }
 
-        public int IdUser { get; set; }
-        public DateTime MesReferencia { get ; set ; }
-        public string NomeGasto { get ; set ; }
-        public DateTime DataGasto { get ; set ; }
-        public double ValorGasto { get ; set ; }
-        public int Status { get ; set ; }
+        public virtual int IdUser { get; set; }
+        public virtual DateTime MesReferencia { get ; set ; }
+        public virtual string NomeGasto { get ; set ; }
+        public virtual DateTime DataGasto { get ; set ; }
+        public virtual double ValorGasto { get ; set ; }
+        public virtual int Status { get ; set ; }
 
-        public Gasto Valid()
+        public virtual Gasto Valid()
         {
             return this;
         }

@@ -10,6 +10,10 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
+using Cronos.Infra.Repositorio;
+using WebSockets.ws;
+using WebSockets.ws.Servico;
+using WebSockets.ws.Interfaces;
 
 namespace Cronos.Api
 {
@@ -43,6 +47,10 @@ namespace Cronos.Api
 
             services.AddCors();
             // services.AddAuthenticationCore();
+            //services.AddScoped<Cronos.Domain.Interfaces.Repositorio.ILivroRepositorio ,Cronos.Infra.NHibernate.Repositorio.LivroRepositorio>();
+
+            services.AddScoped<IWebSocketServico, _WebSocketServico>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +68,7 @@ namespace Cronos.Api
             app.UseCookiePolicy();
             app.UseMvc();
 
-            
+           app.WebSocketsConfigureStartup();
 
         }
     }

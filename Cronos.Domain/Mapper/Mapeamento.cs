@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Cronos.Domain.Config;
 using Cronos.Domain.Entidades;
 using Cronos.Domain.Interfaces.Map;
 using Cronos.Domain.ObjectValues;
@@ -39,6 +40,7 @@ namespace Cronos.Domain.Mapper
                cfg.CreateMap<Usuario, UserResponse>();
 
                cfg.CreateMap<Livro, ListLivroResponse>()
+                    .ForPath(e => e.IdCategoria, p => p.MapFrom(prop => Convert.ToInt32(prop.IdCategoria)))
                     .ForPath(e => e.Categoria , p => p.MapFrom( prop => prop.LivroCategoria.DescricaoCategoria));
 
                 cfg.CreateMap<LivroRequest, Livro>();
@@ -68,7 +70,7 @@ namespace Cronos.Domain.Mapper
             }
             catch (Exception e)
             {
-
+                throw new Exception(e.Message);
             }
             return resp;
         }
@@ -81,6 +83,11 @@ namespace Cronos.Domain.Mapper
         public UserResponse MapUserResponse(Usuario request)
         {
             return _Mapper.Map<UserResponse>(request);
+        }
+
+        public NautilosConig MapNautilosConfig(dynamic request)
+        {
+            return null;
         }
     }
 }

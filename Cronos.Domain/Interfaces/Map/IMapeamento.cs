@@ -1,4 +1,5 @@
-﻿using Cronos.Domain.Entidades;
+﻿using Cronos.Domain.Config;
+using Cronos.Domain.Entidades;
 using Cronos.Domain.Request;
 using Cronos.Domain.Response;
 
@@ -26,5 +27,7 @@ namespace Cronos.Domain.Interfaces.Map
         /// usuario para UserResponse
         /// </summary>
         UserResponse MapUserResponse(Usuario request);
+
+        NautilosConig MapNautilosConfig(dynamic request);
     }
 }

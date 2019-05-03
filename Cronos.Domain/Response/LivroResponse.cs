@@ -14,6 +14,7 @@ namespace Cronos.Domain.Response
     public class ListLivroResponse
     {
         public string Id { get; set; }
+        public int? IdCategoria { get; set; }
         public string Titulo { get; set; }
         public string Autor { get; set; }
         public string Categoria { get; set; }

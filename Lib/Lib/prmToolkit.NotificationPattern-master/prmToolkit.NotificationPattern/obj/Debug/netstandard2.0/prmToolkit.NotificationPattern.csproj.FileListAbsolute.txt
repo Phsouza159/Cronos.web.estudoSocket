@@ -18,7 +18,6 @@ J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard2.0\prmToolkit.NotificationPattern.dll
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard2.0\prmToolkit.NotificationPattern.pdb
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\bin\Debug\netstandard2.0\en-US\prmToolkit.NotificationPattern.resources.dll
-J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.csprojAssemblyReference.cache
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.Resources.Message.resources
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.Resources.Message.en-US.resources
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.csproj.GenerateResource.cache
@@ -28,3 +27,4 @@ J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\en-US\prmToolkit.NotificationPattern.resources.dll
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.dll
 J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.pdb
+J:\Projetos\Cronos.Web\Lib\Lib\prmToolkit.NotificationPattern-master\prmToolkit.NotificationPattern\obj\Debug\netstandard2.0\prmToolkit.NotificationPattern.csprojAssemblyReference.cache

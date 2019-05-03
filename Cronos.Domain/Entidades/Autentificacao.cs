@@ -20,8 +20,8 @@ namespace Cronos.Domain.Entidades
             DataExpiracao = dataExpiracao;
         }
 
-        public string Tokien { get ; set ; }
-        public DateTime DataExpiracao { get ; set ; }
+        public virtual string Tokien { get ; set ; }
+        public virtual DateTime DataExpiracao { get ; set ; }
 
         public virtual Usuario Usuario { get; set; }
     }

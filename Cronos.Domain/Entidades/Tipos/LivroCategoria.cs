@@ -11,8 +11,8 @@ namespace Cronos.Domain.Entidades.Tipos
 
         }
 
-        public int Id { get; set; }
-        public string DescricaoCategoria { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string DescricaoCategoria { get; set; }
 
         public virtual List<Livro> Livro { get; set; }
     }

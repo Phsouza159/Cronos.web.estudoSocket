@@ -36,6 +36,7 @@ namespace Cronos.IoC
             services.AddScoped<ILivroRepositorio , LivroRepositorio>();
             services.AddScoped<ILivroUsuarioRepositorio , LivroUsuarioRepositorio>();
             services.AddScoped<IAutentificacaoRepositorio, AutentificacaoRepositorio>();
+            services.AddScoped<IMensagemRepositorio , MensagemRepositorio>();
 
             // Servico
             services.AddScoped<IAutentificacaoServico, _AutentificacaoServico>();
@@ -44,6 +45,9 @@ namespace Cronos.IoC
 
             // Mapeamento
             services.AddScoped<IMapeamento , Mapeamento>();
+
+            //MHibernet
+            services.AddScoped<Domain.Interfaces.NHibernite.ILivroRepositorio, Infra.NHibernate.Repositorio.LivroRepositorio>();
         }
     }
 }

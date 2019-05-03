@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "11bdbbb92b52a60f2e6d1197c699eb365f77e7a2"
+    "signature": "aa626533665ba767421ce88dc6535a53cc7cd93f"
   },
   "compilationOptions": {},
   "targets": {
@@ -188,6 +188,14 @@
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.18315"
+          }
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
           }
         }
       },
@@ -385,8 +393,8 @@
       "Cronos.Domain/1.0.0": {
         "dependencies": {
           "AutoMapper": "8.0.0",
-          "prmToolkit.NotificationPattern": "1.1.2",
-          "Newtonsoft.Json": "12.0.0.0"
+          "Newtonsoft.Json": "11.0.2",
+          "prmToolkit.NotificationPattern": "1.1.2"
         },
         "runtime": {
           "Cronos.Domain.dll": {}
@@ -413,14 +421,6 @@
         "resources": {
           "en-US/prmToolkit.NotificationPattern.resources.dll": {
             "locale": "en-US"
-          }
-        }
-      },
-      "Newtonsoft.Json.Reference/12.0.0.0": {
-        "runtime": {
-          "Newtonsoft.Json.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.1.22727"
           }
         }
       }
@@ -550,6 +550,13 @@
       "sha512": "sha512-azyQtqbm4fSaDzZHD/J+V6oWMFaf2tWP4WEGIYePLCMw3+b2RQdj9ybgbQyjCshcitQKQ4lEDOZjmSlTTrHxUg==",
       "path": "microsoft.extensions.primitives/2.2.0",
       "hashPath": "microsoft.extensions.primitives.2.2.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-znZGbws7E4BA9jxNZ7FuiIRI3C9hrgatVQSTKhIYZYNOud4M5VfGlTYi6RdYO5sQrebFuF/g9UEV3hOxDMXF6Q==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",
@@ -759,11 +766,6 @@
     },
     "prmToolkit.NotificationPattern/1.1.2": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Newtonsoft.Json.Reference/12.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

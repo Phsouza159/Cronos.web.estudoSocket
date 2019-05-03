@@ -1,11 +1,10 @@
 ﻿using Cronos.Domain.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using prmToolkit.NotificationPattern;
 
 namespace Cronos.Domain.Interfaces.Repositorio
 {
-    public interface ILivroRepositorio : IRepositorioBase<Livro , int>
+    public interface ILivroRepositorio : INotifiable, IRepositorioBase<Livro , int>
     {
+        Interfaces.NHibernite.ILivroRepositorio _Hibernite { get; set; }
     }
 }

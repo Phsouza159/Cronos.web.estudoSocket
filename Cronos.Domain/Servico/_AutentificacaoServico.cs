@@ -15,7 +15,9 @@ namespace Cronos.Domain.Servico
     {
         private IMapeamento _Mapper { get; set; }
 
-        public _AutentificacaoServico(IUsuarioRepositorio usuarioDAO , IAutentificacaoRepositorio AutentificacaoDAO , IMapeamento _Mapper)
+        public _AutentificacaoServico(IUsuarioRepositorio usuarioDAO 
+            , IAutentificacaoRepositorio AutentificacaoDAO 
+            , IMapeamento _Mapper)
         {
             UsuarioDAO = usuarioDAO;
             this.AutentificacaoDAO = AutentificacaoDAO;

@@ -20,9 +20,9 @@ namespace Cronos.Domain.Entidades.Base
         }
 
         [Key]
-        public int Id { get; set; }
-        public bool Situacao { get; set; }
-        public DateTime DataInclusao { get; set; }
+        public virtual int Id { get; set; }
+        public virtual bool Situacao { get; set; }
+        public virtual DateTime DataInclusao { get; set; }
 
     }
 }

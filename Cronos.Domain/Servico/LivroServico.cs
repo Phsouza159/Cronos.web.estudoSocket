@@ -1,5 +1,6 @@
 ﻿using Cronos.Domain.Entidades;
 using Cronos.Domain.Entidades.Relacionamentos;
+using Cronos.Domain.Entidades.Tipos;
 using Cronos.Domain.Interfaces.Map;
 using Cronos.Domain.Interfaces.Repositorio;
 using Cronos.Domain.Interfaces.Servico;
@@ -8,24 +9,28 @@ using Cronos.Domain.Response;
 using prmToolkit.NotificationPattern;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace Cronos.Domain.Servico
 {
-    public class LivroServico : Notifiable, ILivroServico
+    public class LivroServico : ServicoBase<LivroUsuario> , ILivroServico
     {
-
         private ILivroUsuarioRepositorio LivroUsuarioDAO;
         private ILivroRepositorio LivroDAO;
         private IMapeamento Mapeamento;
 
-        public LivroServico(ILivroRepositorio livroDAO, ILivroUsuarioRepositorio livroUsuarioDAO, IMapeamento Mapeamento)
+        public LivroServico(ILivroRepositorio livroDAO
+            , ILivroUsuarioRepositorio livroUsuarioDAO
+            , IMapeamento Mapeamento)
         {
             this.LivroUsuarioDAO = livroUsuarioDAO;
             this.LivroDAO = livroDAO;
             this.Mapeamento = Mapeamento;
-        }
 
+            this.Includes(e => e.Livro 
+                        , e => e.Livro.LivroCategoria);
+        }
 
         public void Add(Livro request)
         {
@@ -68,7 +73,16 @@ namespace Cronos.Domain.Servico
 
         public List<ListLivroResponse> GetByLivroUsuario(int IdUSer)
         {
-            List<LivroUsuario> list = this.LivroUsuarioDAO.GetByUsuario(IdUSer);
+            List<LivroUsuario> list = this.LivroUsuarioDAO.GetByUsuario(IdUSer , this.includeProperties);
+
+            try { 
+                var b = this.LivroDAO._Hibernite.GetAll();
+
+            }catch(Exception e)
+            {
+                this.AddNotification("s", e.Message);
+            }
+
             if (list.Count < 1)
                 return null;
 
@@ -98,10 +112,8 @@ namespace Cronos.Domain.Servico
             {
                 this.LivroUsuarioDAO.Add(livroUsuario);
             }
-            else
-            {
-                this.AddNotifications(this.LivroUsuarioDAO.Notifications);
-            }
+
+            this.AddNotifications(this.LivroUsuarioDAO.Notifications);
         }
     }
 }

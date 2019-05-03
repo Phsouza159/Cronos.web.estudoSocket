@@ -1,8 +1,9 @@
 ﻿using Cronos.Domain.Entidades;
+using prmToolkit.NotificationPattern;
 
 namespace Cronos.Domain.Interfaces.Repositorio
 {
-    public interface ISalarioRepositorio : IRepositorioBase<Salario, int>
+    public interface ISalarioRepositorio : INotifiable, IRepositorioBase<Salario, int>
     {
     }
 }

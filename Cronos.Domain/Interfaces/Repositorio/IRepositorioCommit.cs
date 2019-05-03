@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Cronos.Domain.Interfaces.Repositorio
 {
-    public interface IRepositorioCommit
+    public interface IRepositorioCommit 
     {
         bool Commit();
     }

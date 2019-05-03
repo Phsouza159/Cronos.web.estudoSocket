@@ -11,16 +11,16 @@ namespace Cronos.Domain.Entidades.Relacionamentos
 
         }
 
-        public int IdUsuario{ get; set; }
-        public int IdLivro{ get; set; }
-        public bool? Lido { get; set; }
-        public DateTime? Inicio { get; set; }
-        public DateTime? Fim { get; set; }
+        public virtual int IdUsuario{ get; set; }
+        public virtual int IdLivro { get; set; }
+        public virtual bool? Lido { get; set; }
+        public virtual DateTime? Inicio { get; set; }
+        public virtual DateTime? Fim { get; set; }
 
         public virtual Usuario Usuario { get; set; }
         public virtual Livro Livro { get; set; }
 
-        public LivroUsuario Valid()
+        public virtual LivroUsuario Valid()
         {
 
             return this;

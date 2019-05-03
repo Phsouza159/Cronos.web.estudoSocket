@@ -8,7 +8,6 @@ J:\Projetos\Cronos.Web\Cronos.Infra\bin\Release\netcoreapp2.1\MySQL.Data.EntityF
 J:\Projetos\Cronos.Web\Cronos.Infra\bin\Release\netcoreapp2.1\MySQL.Data.EntityFrameworkCore.dll
 J:\Projetos\Cronos.Web\Cronos.Infra\bin\Release\netcoreapp2.1\Pomelo.EntityFrameworkCore.MySql.dll
 J:\Projetos\Cronos.Web\Cronos.Infra\bin\Release\netcoreapp2.1\prmToolkit.NotificationPattern.dll
-J:\Projetos\Cronos.Web\Cronos.Infra\bin\Release\netcoreapp2.1\Newtonsoft.Json.dll
 J:\Projetos\Cronos.Web\Cronos.Infra\bin\Release\netcoreapp2.1\Google.Protobuf.dll
 J:\Projetos\Cronos.Web\Cronos.Infra\bin\Release\netcoreapp2.1\Cronos.Domain.pdb
 J:\Projetos\Cronos.Web\Cronos.Infra\bin\Release\netcoreapp2.1\prmToolkit.NotificationPattern.pdb
